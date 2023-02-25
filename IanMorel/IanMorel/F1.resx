@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Permita calcular el interés que una persona ganará 
+mensualmente en una institución financiera. La 
+persona llegará el 01 de enero del 2023 a depositar 
+a su cuenta bancaria la cantidad de L 200,000.00 
+y quiere saber cuánto ganará de interés al final de 
+cada mes.</value>
+  </data>
 </root>

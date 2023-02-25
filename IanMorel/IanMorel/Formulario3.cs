@@ -21,6 +21,22 @@ namespace IanMorel
 
         private void Mostrarutton2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(NombreTextBox1.Text))
+            {
+                errorProvider1.SetError(NombreTextBox1, "Ingrese unNombre");
+                NombreTextBox1.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (string.IsNullOrEmpty(ApellidoTextBox1.Text))
+            {
+                errorProvider1.SetError(ApellidoTextBox1, "Ingrese unNombre");
+                ApellidoTextBox1.Focus();
+                return;
+            }
+
+            errorProvider1.Clear();
             nombre = NombreTextBox1.Text;
             apellido = ApellidoTextBox1.Text;
             listBox1.Items.Clear();
@@ -48,6 +64,16 @@ namespace IanMorel
                     listBox1.Items.Add(i);
                 }
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

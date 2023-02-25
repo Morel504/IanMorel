@@ -33,19 +33,38 @@ namespace IanMorel
             decimal descuento = await CalcularDescuento(totalVenta);
 
             decimal totalAPagar = totalVenta - descuento;
+            VentaTextBox1.Text = ("$ " + Convert.ToString(totalVenta));
+            DescuentoTextBox2.Text = ("$ " + Convert.ToString(descuento));
+            PagarTextBox3.Text = ("$ " + Convert.ToString(totalAPagar));
 
-            MessageBox.Show($"Total venta: ${totalVenta}\nDescuento del 15%: ${descuento}\nTotal a pagar: ${totalAPagar}");
+
         }
 
         private async Task<decimal> CalcularDescuento(decimal totalVenta)
         {
-            await Task.Delay(2000); // Simulamos una tarea asíncrona que demora 2 segundos.
+            await Task.Delay(1000); // Simulamos una tarea asíncrona que demora 2 segundos.
 
             return totalVenta * 0.15m;
         }
 
         private void AgregarButton1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(NombreTextBox1.Text))
+            {
+                errorProvider1.SetError(NombreTextBox1, "Ingrese unNombre");
+                NombreTextBox1.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (string.IsNullOrEmpty(PrecioTextBox1.Text))
+            {
+                errorProvider1.SetError(PrecioTextBox1, "Ingrese unNombre");
+                PrecioTextBox1.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
             string nombreProducto = NombreTextBox1.Text;
             decimal precioUnitario = decimal.Parse(PrecioTextBox1.Text);
 
@@ -55,7 +74,9 @@ namespace IanMorel
 
             NombreTextBox1.Clear();
             PrecioTextBox1.Clear();
+
         }
+
         private void btnFinalizarVenta_Click(object sender, EventArgs e)
         {
             seguirAgregandoProductos = false;

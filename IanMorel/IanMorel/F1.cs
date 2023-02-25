@@ -14,7 +14,7 @@ namespace IanMorel
         {
             double capital = 200000.00;
             double tasaInteresMensual = 0.015;
-            string[] meses = { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre" };
+            string[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
             double[] intereses = new double[12];
 
             for (int i = 0; i < meses.Length; i++)
@@ -43,6 +43,16 @@ namespace IanMorel
             Principal principalFormulario = new Principal();
             this.Hide();
             principalFormulario.Show();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -118,5 +118,23 @@
   <ItemGroup>
     <None Include="Resources\logo-unah-7.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierda %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presupuesto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comercio-electronico %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comercio-electronico %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mostrar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
